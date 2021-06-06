@@ -4,6 +4,6 @@ namespace App\Controllers;
 
 use App\Models\TestModel;
 
-class TestCotnrller
+class TestCotnrller{}
 
 ?>
