@@ -2,8 +2,16 @@
 
 namespace App\Controllers;
 
+// Testmodelクラスを読み込み
 use App\Models\TestModel;
 
-class TestCotnrller{}
+class TestController{
+  public function run(){
+    $model = new TestModel();
+    echo $model->getHello();
+  }
+}
+
+
 
 ?>
