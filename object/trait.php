@@ -1,5 +1,7 @@
 <?php
 
+use Product as GlobalProduct;
+
 trait ProductTrait{
   public function getProduct(){
     echo "プロダクト";
@@ -25,7 +27,7 @@ class Product{
   // }
 }
 
-$product = new Product();
+$product = new Product("");
 
 $product->getInformation();
 echo "<br>";
