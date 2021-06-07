@@ -1,14 +1,25 @@
 <?php
 
-// 抽象クラス メソッドを強制（必ず使う）する役割
-abstract class ProductAbstract{
+// インターフェース
+interface ProductInterface{
   // 変数 関数
-  public function echoProduct(){
-    echo "親クラスです";
-  }
+  // public function echoProduct(){
+  //   echo "親クラスです";
+  // }
 
   // 抽象メソッド
-  abstract public function getProduct();
+  public function getProduct();
+
+}
+
+interface NewsInterface{
+  // 変数 関数
+  // public function echoProduct(){
+  //   echo "親クラスです";
+  // }
+
+  // 抽象メソッド
+  public function getNews();
 
 }
 
@@ -28,7 +39,7 @@ class BaseProduct{
 }
 
 // 子クラス extends 親クラス
-class Product extends ProductAbstract {
+class Product implements ProductInterface,NewsInterface {
 
   // 変数
   private $product = [];
@@ -53,8 +64,9 @@ class Product extends ProductAbstract {
     echo $str;
   }
 
-  
-
+  public function getNews(){
+    echo "ニュースです";
+  }
 
 }
 
@@ -74,7 +86,7 @@ echo "<br>";
 
 
 // 親クラスのメソッド
-$instance->echoProduct();
+$instance->getNews();
 
 
 ?>

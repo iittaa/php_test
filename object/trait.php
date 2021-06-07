@@ -8,7 +8,7 @@ trait ProductTrait{
 
 trait NewsTrait{
   public function getNews(){
-    echo "ニュース";
+    echo "ニュースです";
   }
 }
 
@@ -19,6 +19,10 @@ class Product{
   public function getInformation(){
     echo "クラスです";
   }
+
+  // public function getNews(){
+  //   echo "クラスのニュースです";
+  // }
 }
 
 $product = new Product();

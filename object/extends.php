@@ -7,7 +7,7 @@ class BaseProduct{
     echo "親クラスです";
   }
 
-  // オーバーライド
+  // オーバーライド(上書き)
   public function getProduct(){
     echo "親の関数です";
   }
@@ -15,7 +15,7 @@ class BaseProduct{
 }
 
 // 子クラス extends 親クラス
-class Product extends BaseProduct {
+final class Product extends BaseProduct {
 
   // 変数
   private $product = [];
@@ -47,8 +47,9 @@ class Product extends BaseProduct {
 
 $instance = new Product("テスト");
 
-var_dump($instance);
-echo "<br>";
+// var_dump($instance);
+// echo "<br>";
+
 
 $instance->getProduct();
 echo "<br>";
